@@ -17,3 +17,7 @@ Type '!RileysCommands' to display the list of available commands, shown below.
 !allahu akbar       Play "ALLAHU AKBAR!" sound
 !TerroristsWin      Play CS GO "Terrorists Win" sound
 ```
+
+## Future Features
+* Version 1.1 will include more sounds!
+* Version 2.0 will modify the existing code to support any .mp3 file, without the need for code modifications.
