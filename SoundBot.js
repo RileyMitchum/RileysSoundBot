@@ -6,7 +6,7 @@ client.login(config.token);
 
 client.on("message", msg => 
 {
-    if (msg.content.startsWith("!allahu akbar")) 
+    	if (msg.content.startsWith("!allahu akbar")) 
 	{
 		const voiceChannel = msg.member.voiceChannel;
 		const file = `sound/akbar1.mp3`;
@@ -36,7 +36,7 @@ client.on("message", msg =>
 
 client.on('ready', () => 
 {
-  console.log('Terrorist Bot is Running!');
+	console.log('Terrorist Bot is Running!');
 });
 
 function playSound(file, voiceChannel, msg) 
@@ -56,12 +56,12 @@ function playSound(file, voiceChannel, msg)
 }
 
 function listCommands(msg) {
-  const message = [
-    '```',
-    '!RileysCommands  Show this message',
-    '!allahu akbar       Play "ALLAHU AKBAR!" sound',
-    '!TerroristsWin      Play CS GO "Terrorists Win" sound',
-    '```'
-  ];
-  msg.channel.sendMessage(message);
+	const message = [
+	'```',
+	'!RileysCommands  Show this message',
+	'!allahu akbar       Play "ALLAHU AKBAR!" sound',
+	'!TerroristsWin      Play CS GO "Terrorists Win" sound',
+	'```'
+	];
+	msg.channel.sendMessage(message);
 }
