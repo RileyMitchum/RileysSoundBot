@@ -8,7 +8,6 @@ client.on("message", msg =>
 {
     if (msg.content.startsWith("!allahu akbar")) 
 	{
-		client.sendFile(msg.channel, "./sound/image.jpg");
 		const voiceChannel = msg.member.voiceChannel;
 		const file = `sound/akbar1.mp3`;
 		
@@ -37,7 +36,7 @@ client.on("message", msg =>
 
 client.on('ready', () => 
 {
-  console.log('I am ready, and running!');
+  console.log('Terrorist Bot is Running!');
 });
 
 function playSound(file, voiceChannel, msg) 
