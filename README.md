@@ -1,5 +1,4 @@
 # NicksTerroristBot
-================
 
 A Bot for Discord that will play various audio files.
 
