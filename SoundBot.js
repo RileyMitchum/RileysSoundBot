@@ -28,7 +28,7 @@ client.on("message", msg =>
 		}
 	}
 	
-	if (msg.content === '!TerroristCommands') {
+	if (msg.content === '!RileysCommands') {
 		listCommands(msg);
 		return;
 	}
@@ -58,9 +58,9 @@ function playSound(file, voiceChannel, msg)
 function listCommands(msg) {
   const message = [
     '```',
-    '!TerroristCommands  Show this message',
+    '!RileysCommands  Show this message',
     '!allahu akbar       Play "ALLAHU AKBAR!" sound',
-	'!TerroristsWin      Play CS GO "Terrorists Win" sound',
+    '!TerroristsWin      Play CS GO "Terrorists Win" sound',
     '```'
   ];
   msg.channel.sendMessage(message);
