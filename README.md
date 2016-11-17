@@ -1,4 +1,4 @@
-# Nicks Terrorist Bot
+# Riley's Sound Bot
 
 A Bot for Discord that will play various audio files.
 
@@ -10,10 +10,10 @@ A Bot for Discord that will play various audio files.
 
 ## Commands
 
-Type '!TerroristCommands' to display the list of available commands, shown below.
+Type '!RileysCommands' to display the list of available commands, shown below.
 
 ```
-!TerroristCommands  Show this message
+!RileysCommands  Show this message
 !allahu akbar       Play "ALLAHU AKBAR!" sound
 !TerroristsWin      Play CS GO "Terrorists Win" sound
 ```
