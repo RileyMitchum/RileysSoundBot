@@ -4,7 +4,7 @@ A Bot for Discord that will play various audio files.
 
 ## Required Dependencies 
 
-1. **Node.js v6.0.0** or newer is required per [discord.js](https://github.com/hydrabolt/discord.js#installation).
+1. **Node.js v6.0.0** or newer is required per [discord.js](https://discord.js.org/#!/docs/tag/master/file/general/Welcome).
   * Node-Opus should be installed with Node.js, to support voice capabilites.
 2. **FFmpeg** is required, for voice capabilities.
 
