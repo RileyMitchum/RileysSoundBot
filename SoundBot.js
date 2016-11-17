@@ -36,7 +36,7 @@ client.on("message", msg =>
 
 client.on('ready', () => 
 {
-	console.log('Terrorist Bot is Running!');
+	console.log('Rileys Sound Bot is Running!');
 });
 
 function playSound(file, voiceChannel, msg) 
