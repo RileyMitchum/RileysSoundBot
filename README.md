@@ -9,7 +9,10 @@ A Bot for Discord that will play various audio files.
 
 # Commands
 
-+ !TerroristCommands  Show this message
-+ !allahu akbar       Play "ALLAHU AKBAR!" sound
-+ !TerroristsWin      Play CS GO "Terrorists Win" sound
-    
+Type '!TerroristCommands' to display the list of available commands, shown below.
+
+'```',
+'!TerroristCommands  Show this message',
+'!allahu akbar       Play "ALLAHU AKBAR!" sound',
+'!TerroristsWin      Play CS GO "Terrorists Win" sound',
+'```'
