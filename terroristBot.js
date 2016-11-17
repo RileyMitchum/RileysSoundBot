@@ -2,7 +2,8 @@ var Discord = require("discord.js");
 var client = new Discord.Client;
 var request = require("superagent");
 
-client.login("<YOUR_TOKEN_HERE>"); 
+var token = "<YOUR_TOKEN_HERE>";
+client.login(token); 
 
 client.on("message", msg => 
 {
