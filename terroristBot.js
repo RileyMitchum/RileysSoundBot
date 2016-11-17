@@ -1,8 +1,8 @@
-var Discord = require("discord.js");
-var client = new Discord.Client;
+const config = require('./config/default.json');
+const Discord = require("discord.js");
+const client = new Discord.Client();
 
-var token = "<YOUR_TOKEN_HERE>";
-client.login(token); 
+client.login(config.token); 
 
 client.on("message", msg => 
 {
