@@ -6,26 +6,52 @@ client.login(config.token);
 
 client.on("message", msg => 
 {
-    	if (msg.content.startsWith("!allahu akbar")) 
+    if (msg.content.startsWith("!Allahu Akbar")) 
 	{
-		const voiceChannel = msg.member.voiceChannel;
 		const file = `sound/akbar1.mp3`;
-		
-		if (voiceChannel != undefined)
-		{
-			playSound(file, voiceChannel, msg);
-		}
+		playSound(file, msg);
 	}
 	
 	if (msg.content.startsWith("!TerroristsWin")) 
 	{
-		const voiceChannel = msg.member.voiceChannel;
 		const file = `sound/csgoTerroristsWin.mp3`;
-		
-		if (voiceChannel != undefined)
-		{
-			playSound(file, voiceChannel, msg);
-		}
+		playSound(file, msg);
+	}
+	
+	if (msg.content.startsWith("!Genius")) 
+	{
+		const file = `sound/genius.mp3`;
+		playSound(file, msg);
+	}
+	
+	if (msg.content.startsWith("!WhoRYou")) 
+	{
+		const file = `sound/whoRYou.mp3`; // Does not work
+		playSound(file, msg);
+	}
+	
+	if (msg.content.startsWith("!ProveIt")) 
+	{
+		const file = `sound/proveIt.mp3`; // Does not work
+		playSound(file, msg);
+	}
+	
+	if (msg.content.startsWith("!UmmmNo")) 
+	{
+		const file = `sound/ummmNo.mp3`;
+		playSound(file, msg);
+	}
+	
+	if (msg.content.startsWith("!NotToday")) 
+	{
+		const file = `sound/notToday.mp3`;
+		playSound(file, msg);
+	}
+	
+	if (msg.content.startsWith("!Now")) 
+	{
+		const file = `sound/now.mp3`; // Does not work
+		playSound(file, msg);
 	}
 	
 	if (msg.content === '!RileysCommands') {
@@ -36,30 +62,34 @@ client.on("message", msg =>
 
 client.on('ready', () => 
 {
-	console.log('Terrorist Bot is Running!');
+	console.log('Rileys Sound Bot is Running!');
 });
 
-function playSound(file, voiceChannel, msg) 
+function playSound(file, msg) 
 {
-	voiceChannel.join().then((connection) => 
+	const voiceChannel = msg.member.voiceChannel;
+	if (voiceChannel != undefined)
 	{
-		const dispatcher = connection.playFile(file);
-		dispatcher.on('end', () => 
+		voiceChannel.join().then((connection) => 
 		{
-			connection.disconnect();
+			const dispatcher = connection.playFile(file);
+			dispatcher.on('end', () => 
+			{
+				connection.disconnect();
+			});
+		}).catch((error) => 
+		{
+			console.log('Error occured!');
+			console.log(error);
 		});
-	}).catch((error) => 
-	{
-		console.log('Error occured!');
-		console.log(error);
-	});
+	}
 }
 
 function listCommands(msg) {
 	const message = [
 	'```',
 	'!RileysCommands  Show this message',
-	'!allahu akbar       Play "ALLAHU AKBAR!" sound',
+	'!Allahu Akbar       Play "ALLAHU AKBAR!" sound',
 	'!TerroristsWin      Play CS GO "Terrorists Win" sound',
 	'```'
 	];
