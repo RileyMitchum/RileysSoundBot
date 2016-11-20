@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 var fs = require('fs');
 
-var version = '1.1 DEV';
+var version = '2.0';
 var files = fs.readdirSync('./sound');
 client.login(config.token); 
 
