@@ -20,7 +20,7 @@ Riley's Sound Bot v1.1
 !Allahu Akbar   --- Play "ALLAHU AKBAR!" sound
 !TerroristsWin  --- Play CS GO "Terrorists Win" sound
 
-- Nick's Audio -
+- Nick Audio Expansion Pack -
 !Genius         --- Play "Genius!" sound.  Audio courtesy of Nick
 !WhoRYou        --- Play "Who are you?" sound.  Audio courtesy of Nick
 !ProveIt        --- Play "Prove It!" sound.  Audio courtesy of Nick
