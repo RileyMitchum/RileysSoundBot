@@ -20,7 +20,7 @@ Riley's Sound Bot v2.0
 !ListAudio      --- List all available audio files.
 
 - Generic Audio -
-Allahu Akbar   --- Play "ALLAHU AKBAR!" sound
+!Allahu Akbar   --- Play "ALLAHU AKBAR!" sound
 !TerroristsWin  --- Play CS GO "Terrorists Win" sound
 
 - Nick Audio Expansion Pack With Bonus Kody Sound File -
