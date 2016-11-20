@@ -2,7 +2,7 @@ const config = require('./config/default.json');
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-var version = '1.1.2';
+var version = '1.1 DEV';
 client.login(config.token); 
 
 client.on("message", msg => 
@@ -22,7 +22,7 @@ client.on("message", msg =>
 				playSound(`sound/genius.mp3`, msg);
 				break;
 			case ("!whoryou"):
-				playSound(`sound/whoRYou.mp33`, msg);
+				playSound(`sound/whoRYou.mp3`, msg);
 				break;
 			case ("!proveit"):
 				playSound(`sound/proveIt.mp3`, msg);
@@ -88,7 +88,7 @@ function listCommands(msg) {
 	'!Allahu Akbar   --- Play "ALLAHU AKBAR!" sound',
 	'!TerroristsWin  --- Play CS GO "Terrorists Win" sound',
 	' ',
-	'- Nick\'s Audio -',
+	'- Nick Audio Expansion Pack -',
 	'!Genius         --- Play "Genius!" sound.  Audio courtesy of Nick',
 	'!WhoRYou        --- Play "Who are you?" sound.  Audio courtesy of Nick',
 	'!ProveIt        --- Play "Prove It!" sound.  Audio courtesy of Nick',
