@@ -9,54 +9,51 @@ client.on("message", msg =>
 {
     if (msg.content.startsWith("!Allahu Akbar")) 
 	{
-		const file = `sound/akbar1.mp3`;
-		playSound(file, msg);
+		playSound(`sound/akbar1.mp3`, msg);
 	}
 	
 	if (msg.content.startsWith("!TerroristsWin")) 
 	{
-		const file = `sound/csgoTerroristsWin.mp3`;
-		playSound(file, msg);
+		playSound(`sound/csgoTerroristsWin.mp3`, msg);
 	}
 	
 	if (msg.content.startsWith("!Genius")) 
 	{
-		const file = `sound/genius.mp3`;
-		playSound(file, msg);
+		playSound(`sound/genius.mp3`, msg);
 	}
 	
-/* 	if (msg.content.startsWith("!WhoRYou")) 
+	if (msg.content.startsWith("!WhoRYou")) 
 	{
-		const file = `sound/whoRYou.mp3`; // Does not work
-		playSound(file, msg);
-	} */
+		playSound(`sound/whoRYou.mp3`, msg);
+	}
 	
-/* 	if (msg.content.startsWith("!ProveIt")) 
+	if (msg.content.startsWith("!ProveIt")) 
 	{
-		const file = `sound/proveIt.mp3`; // Does not work
-		playSound(file, msg);
-	} */
+		playSound(`sound/proveIt.mp3`, msg);
+	}
 	
 	if (msg.content.startsWith("!UmmmNo")) 
 	{
-		const file = `sound/ummmNo.mp3`;
-		playSound(file, msg);
+		playSound(`sound/ummmNo.mp3`, msg);
 	}
 	
 	if (msg.content.startsWith("!NotToday")) 
 	{
-		const file = `sound/notToday.mp3`;
-		playSound(file, msg);
+		playSound(`sound/notToday.mp3`, msg);
 	}
 	
-/* 	if (msg.content.startsWith("!Now")) 
+	if (msg.content.startsWith("!Now")) 
 	{
-		const file = `sound/now.mp3`; // Does not work
-		playSound(file, msg);
-	} */
+		playSound(`sound/now.mp3`, msg);
+	}
 	
 	if (msg.content === '!HelpRiley') {
 		listCommands(msg);
+		return;
+	}
+	
+	if (msg.content === '!kys') {
+		client.destroy();
 		return;
 	}
 });
@@ -84,6 +81,10 @@ function playSound(file, msg)
 			console.log(error);
 		});
 	}
+	else
+	{
+		msg.channel.sendMessage("Join a voice channel you idiot!");
+	}
 }
 
 function listCommands(msg) {
@@ -91,15 +92,18 @@ function listCommands(msg) {
 	'```',
 	'Riley\'s Sound Bot v' + version,
 	' ',
+	'- Generic Audio -',
 	'!HelpRiley      --- Show this message',
 	'!Allahu Akbar   --- Play "ALLAHU AKBAR!" sound',
 	'!TerroristsWin  --- Play CS GO "Terrorists Win" sound',
-	'!Genius         --- Play "Genius!" sound',
-	'!WhoRYou        --- Does not currently work -- Play "Who are you?" sound',
-	'!ProveIt        --- Does not currently work -- Play "Prove It!" sound',
-	'!UmmmNo         --- Play "Ummmm no?!?!?" sound',
-	'!NotToday       --- Play "Not today!" sound',
-	'!Now            --- Does not currently work -- Play "Now!" sound',
+	' ',
+	'- Nick\'s Audio -',
+	'!Genius         --- Play "Genius!" sound.  Audio courtesy of Nick',
+	'!WhoRYou        --- Play "Who are you?" sound.  Audio courtesy of Nick',
+	'!ProveIt        --- Play "Prove It!" sound.  Audio courtesy of Nick',
+	'!UmmmNo         --- Play "Ummmm no?!?!?" sound.  Audio courtesy of Nick',
+	'!NotToday       --- Play "Not today!" sound.  Audio courtesy of Nick',
+	'!Now            --- Play "Now!" sound.  Audio courtesy of Nick',
 	'```'
 	];
 	msg.channel.sendMessage(message);
