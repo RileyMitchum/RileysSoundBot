@@ -12,8 +12,6 @@ client.on("message", msg =>
 	if (msg.content.startsWith("!"))
 	{
 		var command = msg.content;
-		console.log(command);
-		console.log(files.includes(command.substring(1) + '.mp3'));
 		if (files.includes(command.substring(1) + '.mp3'))
 		{
 			playSound(`sound/` + command.substring(1) + `.mp3`, msg);
@@ -41,7 +39,6 @@ client.on("message", msg =>
 client.on('ready', () => 
 {
 	console.log('Rileys Sound v' + version + ' Bot is Running!');
-	console.log('Available files: ' + files.toString());
 });
 
 function playSound(file, msg) 
