@@ -10,14 +10,27 @@ A Bot for Discord that will play various audio files.
 
 ## Commands
 
-Type '!RileysCommands' to display the list of available commands, shown below.
+Type '!HelpRiley' to display the list of available commands, shown below.
 
 ```
-!RileysCommands  Show this message
-!allahu akbar       Play "ALLAHU AKBAR!" sound
-!TerroristsWin      Play CS GO "Terrorists Win" sound
+Riley's Sound Bot v2.0
+
+- Commands -
+!HelpRiley      --- Show this message
+!ListAudio      --- List all available audio files.
+
+- Generic Audio -
+Allahu Akbar   --- Play "ALLAHU AKBAR!" sound
+!TerroristsWin  --- Play CS GO "Terrorists Win" sound
+
+- Nick Audio Expansion Pack With Bonus Kody Sound File -
+!Genius         --- Play "Genius!" sound.  Audio courtesy of Nick
+!ProveIt        --- Play "Prove It!" sound.  Audio courtesy of Nick
+!UmmmNo         --- Play "Ummmm no?!?!?" sound.  Audio courtesy of Nick
+!NotToday       --- Play "Not today!" sound.  Audio courtesy of Nick
+!Now            --- Play "Now!" sound.  Audio courtesy of Nick
+!WhoRYou        --- Play "Who are you?" sound.  Audio courtesy of Kody
 ```
 
 ## Future Features
-* Version 1.1 will include more sounds!
-* Version 2.0 will modify the existing code to support any .mp3 file, without the need for code modifications.
+Contact me for feature requests.
