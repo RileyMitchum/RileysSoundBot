@@ -2,59 +2,50 @@ const config = require('./config/default.json');
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-var version = '1.1';
+var version = '1.1.2';
 client.login(config.token); 
 
 client.on("message", msg => 
 {
-    if (msg.content.startsWith("!Allahu Akbar")) 
+	if (msg.content.startsWith("!"))
 	{
-		playSound(`sound/akbar1.mp3`, msg);
-	}
-	
-	if (msg.content.startsWith("!TerroristsWin")) 
-	{
-		playSound(`sound/csgoTerroristsWin.mp3`, msg);
-	}
-	
-	if (msg.content.startsWith("!Genius")) 
-	{
-		playSound(`sound/genius.mp3`, msg);
-	}
-	
-	if (msg.content.startsWith("!WhoRYou")) 
-	{
-		playSound(`sound/whoRYou.mp3`, msg);
-	}
-	
-	if (msg.content.startsWith("!ProveIt")) 
-	{
-		playSound(`sound/proveIt.mp3`, msg);
-	}
-	
-	if (msg.content.startsWith("!UmmmNo")) 
-	{
-		playSound(`sound/ummmNo.mp3`, msg);
-	}
-	
-	if (msg.content.startsWith("!NotToday")) 
-	{
-		playSound(`sound/notToday.mp3`, msg);
-	}
-	
-	if (msg.content.startsWith("!Now")) 
-	{
-		playSound(`sound/now.mp3`, msg);
-	}
-	
-	if (msg.content === '!HelpRiley') {
-		listCommands(msg);
-		return;
-	}
-	
-	if (msg.content === '!kys') {
-		client.destroy();
-		return;
+		var command = msg.content.toLowerCase();
+		switch (command)
+		{
+			case ("!allahu akbar"):
+				playSound(`sound/akbar1.mp3`, msg);
+				break;
+			case ("!terroristswin"):
+				playSound(`sound/csgoTerroristsWin.mp3`, msg);
+				break;
+			case ("!genius"):
+				playSound(`sound/genius.mp3`, msg);
+				break;
+			case ("!whoryou"):
+				playSound(`sound/whoRYou.mp33`, msg);
+				break;
+			case ("!proveit"):
+				playSound(`sound/proveIt.mp3`, msg);
+				break;
+			case ("!ummmno"):
+				playSound(`sound/ummmNo.mp3`, msg);
+				break;
+			case ("!nottoday"):
+				playSound(`sound/notToday.mp3`, msg);
+				break;
+			case ("!now"):
+				playSound(`sound/now.mp3`, msg);
+				break;
+			case ("!helpriley"):
+				listCommands(msg);
+				break;
+			case ("!kys"):
+				client.destroy();
+				break;
+			default:
+				msg.channel.sendMessage("You clearly have no idea what you are doing.  Here is the list of commands.");
+				listCommands(msg);
+		}
 	}
 });
 
