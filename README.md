@@ -35,5 +35,9 @@ Riley's Sound Bot v2.0
 !Wrong			--- Play Donald Trump saying "Wrong".
 ```
 
+## Adding New Sounds
+
+To add a new sound, simply drop the \<filename>\.mp3 file in the ./sound folder.  The command to call the sound from Discord will simply be '!\<filename\>'.  For example, the file Allahu Akbar.mp3 is in the ./sound folder, and it is called using '!Allahu Akbar'.
+
 ## Future Features
 Contact me for feature requests.
