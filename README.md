@@ -30,6 +30,9 @@ Riley's Sound Bot v2.0
 !NotToday       --- Play "Not today!" sound.  Audio courtesy of Nick
 !Now            --- Play "Now!" sound.  Audio courtesy of Nick
 !WhoRYou        --- Play "Who are you?" sound.  Audio courtesy of Kody
+
+- President Trump Audio Expansion Pack -
+!Wrong			--- Play Donald Trump saying "Wrong".
 ```
 
 ## Future Features
