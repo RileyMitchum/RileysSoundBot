@@ -29,7 +29,8 @@ Riley's Sound Bot v2.0
 !UmmmNo         --- Play "Ummmm no?!?!?" sound.  Audio courtesy of Nick
 !NotToday       --- Play "Not today!" sound.  Audio courtesy of Nick
 !Now            --- Play "Now!" sound.  Audio courtesy of Nick
-!WhoRYou        --- Play "Who are you?" sound.  Audio courtesy of Kody
+!Illegal        --- Play "He's an illegal" sound.  Audio courtesy of Nick
+!WhoRYou        --- Play "Who are you?" sound.  Audio courtesy of Nick
 
 - President Trump Audio Expansion Pack -
 !Wrong			--- Play Donald Trump saying "Wrong".
