@@ -3,8 +3,10 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 var fs = require('fs');
 
-var version = '2.0';
+var version = '2.1';
 var files = fs.readdirSync('./sound');
+var defaultVoiceChannel = config.defaultVoiceChannel;
+var allowDefaultVoice = true;
 client.login(config.token); 
 
 client.on("message", msg => 
@@ -20,17 +22,14 @@ client.on("message", msg =>
 		{
 			switch (command)
 			{
-				case ("!HelpRiley"):
+				case ("!helpbot"):
 					listCommands(msg);
 					break;
-				case ("!kys"):
-					client.destroy();
-					break;
-				case ("!ListAudio"):
+				case ("!listaudio"):
 					msg.channel.sendMessage('Available files: ' + files.toString());
 					break;
 				default:
-					msg.channel.sendMessage('Not a command...');
+					//msg.channel.sendMessage('Not a command...  Try !HelpBot');
 			}
 		}
 	}
@@ -43,26 +42,30 @@ client.on('ready', () =>
 
 function playSound(file, msg) 
 {
-	const voiceChannel = msg.member.voiceChannel;
-	if (voiceChannel != undefined)
+	var voiceChannel = msg.member.voiceChannel;
+	if (voiceChannel == undefined)
 	{
-		voiceChannel.join().then((connection) => 
+		if (allowDefaultVoice == false)
 		{
-			const dispatcher = connection.playFile(file);
-			dispatcher.on('end', () => 
-			{
-				connection.disconnect();
-			});
-		}).catch((error) => 
+			msg.channel.sendMessage("Join a voice channel!");
+			return;
+		}
+		else
+			voiceChannel = client.channels.get(defaultVoiceChannel)		
+	}
+	
+	voiceChannel.join().then((connection) => 
+	{
+		const dispatcher = connection.playFile(file);
+		dispatcher.on('end', () => 
 		{
-			console.log('Error occured!');
-			console.log(error);
+			connection.disconnect();
 		});
-	}
-	else
+	}).catch((error) => 
 	{
-		msg.channel.sendMessage("Join a voice channel you idiot!");
-	}
+		console.log('Error occured!');
+		console.log(error);
+	});
 }
 
 function listCommands(msg) {
@@ -71,7 +74,7 @@ function listCommands(msg) {
 	'Riley\'s Sound Bot v' + version,
 	' ',
 	'- Commands -',
-	'!HelpRiley      --- Show this message',
+	'!HelpBot      --- Show this message',
 	'!ListAudio      --- List all available audio files.',
 	' ',
 	'- Generic Audio -',
@@ -89,6 +92,13 @@ function listCommands(msg) {
 	' ',
 	'- President Trump Audio Expansion Pack -',
 	'!Wrong			--- Play Donald Trump saying "Wrong".',
+	' ',
+	'- Matt\'s Picks Audio Pack -',
+	'!LazyD			--- Play "Lazy D".',
+	'!Size			--- Play "Size".',
+	'!Salami			--- Play "Salami".',
+	'!StopIt			--- Play "Stop It".',
+	'!PokemonGo			--- Play "Pokemon Go by Misha".',
 	'```'
 	];
 	msg.channel.sendMessage(message);
