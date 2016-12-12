@@ -92,13 +92,6 @@ function listCommands(msg) {
 	' ',
 	'- President Trump Audio Expansion Pack -',
 	'!Wrong			--- Play Donald Trump saying "Wrong".',
-	' ',
-	'- Matt\'s Picks Audio Pack -',
-	'!LazyD			--- Play "Lazy D".',
-	'!Size			--- Play "Size".',
-	'!Salami			--- Play "Salami".',
-	'!StopIt			--- Play "Stop It".',
-	'!PokemonGo			--- Play "Pokemon Go by Misha".',
 	'```'
 	];
 	msg.channel.sendMessage(message);
